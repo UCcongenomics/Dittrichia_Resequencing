@@ -1,0 +1,61 @@
+#Debating whether to remove duplicates. Recent papers suggest it doesn't change genome-wide mapping rate or SNPs in pop gen studies. Trying a test to see how much is further removed beyond fastp, which also removes duplicates.
+#https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965708/
+
+###Original sorted BAM:
+22895876 + 0 in total (QC-passed reads + QC-failed reads)
+22768170 + 0 primary
+0 + 0 secondary
+127706 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+22849899 + 0 mapped (99.80% : N/A)
+22722193 + 0 primary mapped (99.80% : N/A)
+22768170 + 0 paired in sequencing
+11384085 + 0 read1
+11384085 + 0 read2
+22466924 + 0 properly paired (98.68% : N/A)
+22705206 + 0 with itself and mate mapped
+16987 + 0 singletons (0.07% : N/A)
+181860 + 0 with mate mapped to a different chr
+113653 + 0 with mate mapped to a different chr (mapQ>=5)
+2198_S313_L003.sorted.flagstat
+
+###Duplicates removed BAM:
+22895876 + 0 in total (QC-passed reads + QC-failed reads)
+22768170 + 0 primary
+0 + 0 secondary
+127706 + 0 supplementary
+0 + 0 duplicates
+0 + 0 primary duplicates
+22849899 + 0 mapped (99.80% : N/A)
+22722193 + 0 primary mapped (99.80% : N/A)
+22768170 + 0 paired in sequencing
+11384085 + 0 read1
+11384085 + 0 read2
+22466924 + 0 properly paired (98.68% : N/A)
+22705206 + 0 with itself and mate mapped
+16987 + 0 singletons (0.07% : N/A)
+181860 + 0 with mate mapped to a different chr
+113653 + 0 with mate mapped to a different chr (mapQ>=5)
+2198_S313_L003.flagstat
+
+No Change
+
+Checking the rest of my 10 practice files, there IS sometimes a change!
+It's about 1-4% loss, so not terrible. Going to proceed with Picard MarkDuplicates
+
+The script I used to generat flagstat and compare read totals is comparedups.sh
+
+Library	Sorted Total Reads	Dedup Total Reads
+2190_S306_L003	32113066	31039987
+2191_S445_L003	5586934	5370811
+2191_S445_L004	12879080	12328927
+2192_S307_L003	24063722	23235955
+2193_S308_L003	28955150	27918179
+2194_S309_L003	20714623	20051732
+2195_S310_L003	18842966	18080450
+2196_S311_L003	19488952	18717768
+2197_S312_L003	22763173	21930281
+2198_S313_L003	22895876	22137616
+
+
