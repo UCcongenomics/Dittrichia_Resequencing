@@ -58,4 +58,8 @@ Library	Sorted Total Reads	Dedup Total Reads
 2197_S312_L003	22763173	21930281
 2198_S313_L003	22895876	22137616
 
+###Now I am going to merge bams before marking duplicates because:
+Mark Duplicates: After merging, you can then mark or remove duplicates using Picard or samtools. Duplicates should be marked/removed after merging because the same library sequenced on different lanes might contain the same molecules (PCR duplicates).
+#it's been a week and I'm about 1/2 way through all the initial bam mapping.
+My Merge script and Mark Duplicates --> Remove Duplicates script will be ready when they are done.
 
