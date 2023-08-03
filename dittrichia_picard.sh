@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Directory containing the merged .bam files
-input_dir="/projects/dittrichia/mapped_reads1"
+input_dir="/projects/dittrichia/mapped_reads"
 
 # Path to the Picard Tools executable
 picard_path="/software/picard/build/libs/"
 
 # Create the output directory for the duplicate-marked reads
-output_dir="/projects/dittrichia/mapped_reads1/rm_dup_bams"
+output_dir="/projects/dittrichia/mapped_reads/rm_dup_bams"
 
 mkdir -p "${output_dir}"
 
