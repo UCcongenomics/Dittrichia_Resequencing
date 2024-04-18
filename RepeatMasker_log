@@ -1,0 +1,22 @@
+RepeatMasker_Readme
+
+This is my output from running RepeatMasker
+
+(PSMC) rameyer@kelpser:/software/RepeatMasker/RepeatMasker$ RepeatMasker -species dicots -pa 8 -gff -html -no_is -xsmall /projects/dittrichia/dittrichia_primary_nu_ch_mi.fasta
+RepeatMasker version 4.1.5
+Search Engine: NCBI/RMBLAST [ 2.14.1+ ]
+
+Using Master RepeatMasker Database: /home/rameyer/miniconda2/envs/PSMC/share/RepeatMasker/Libraries/RepeatMaskerLib.h5
+  Title    : Dfam
+  Version  : 3.7
+  Date     : 2023-01-11
+  Families : 19,768
+
+Species/Taxa Search:
+  eudicotyledons [NCBI Taxonomy ID: 71240]
+  Lineage: root;cellular organisms;Eukaryota;Viridiplantae;
+           Streptophyta;Streptophytina;Embryophyta;Tracheophyta
+  9 families in ancestor taxa; 0 lineage-specific families
+
+
+analyzing file /projects/dittrichia/dittrichia_primary_nu_ch_mi.fasta
